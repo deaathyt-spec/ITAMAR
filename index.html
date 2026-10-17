@@ -1863,6 +1863,39 @@ svg.leaflet-image-layer.leaflet-interactive path {
 		}
 	}
 </style>
+<!-- Meta Pixel Code | CT Itamar Top Family -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1678633720348464');
+fbq('track', 'PageView');
+(function () {
+  function isWhats(url) { return /wa\.me|whatsapp\.com/i.test(String(url || '')); }
+  // Botões e links de WhatsApp
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (a && isWhats(a.href)) {
+      fbq('track', 'Contact', { content_name: (a.textContent || '').trim().slice(0, 50) || 'Link WhatsApp' });
+    }
+  }, true);
+  // Formulário de planos (abre o WhatsApp via window.open)
+  var openOriginal = window.open;
+  window.open = function (url) {
+    if (isWhats(url)) { fbq('track', 'Contact', { content_name: 'Formulario de plano' }); }
+    return openOriginal.apply(window, arguments);
+  };
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1678633720348464&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
